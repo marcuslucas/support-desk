@@ -15,13 +15,13 @@ const Tickets = (props) => {
   useEffect(() => {
     return () => {
       if (isSuccess) {
-        dispatch(reset);
+        dispatch(reset());
       }
     };
   }, [dispatch, isSuccess]);
 
   useEffect(() => {
-    dispatch(getTickets);
+    dispatch(getTickets());
   }, [dispatch]);
 
   if (isLoading) {
